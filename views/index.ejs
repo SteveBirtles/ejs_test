@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>Bank Holidays</title>
+</head>
+
+<body>
+
+  <h1>Upcoming bank holidays</h1>
+
+  <table>
+
+    <tr>
+
+      <th style="width: 250px; text-align: left">Title</th>
+      <th style="width: 100px; text-align: left">Type</th>
+      <th style="width: 150px; text-align: left">Date</th>
+      <th style="width: 100px; text-align: left">Days to go</th>
+      <th style="width: 100px; text-align: left">Bunting</th>
+
+    </tr>
+
+    <% for (let holiday of holidays) { %>
+
+    <tr>
+
+      <td><%= holiday.title %></td>
+      <td><%= holiday.substitueDay ? "Substitute" : "" %></td>
+      <td><%= holiday.date %></td>
+      <td><%= holiday.daysToGo %></td>
+      <td><%= holiday.buntingRequired ? "Yes!" : ""%></td>
+
+    </tr>
+
+    <% } %>
+
+
+  </table>
+
+</body>
+
+</html>
